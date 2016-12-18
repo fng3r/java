@@ -6,9 +6,9 @@ public interface FrequencyDictionary
 	public Integer get(String word);
 	public void put(String word);
 	public ArrayList<Entry<String, Integer>> getTop(String prefix, int count);
-	public default void putAll(String[] string)
+	public default void putAll(String[] line)
 	{
-		for (String word : string)
+		for (String word : line)
 			put(word);
 	}
 }
